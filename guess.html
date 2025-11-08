@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>🎯 Guess the Code – TnG Reward!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Lockout Overlay -->
+  <div id="lockoutOverlay" class="lockout-overlay">
+    <div class="lockout-content">
+      <div class="lockout-icon">🔒</div>
+      <h2>Too Many Attempts!</h2>
+      <p>You've exceeded the maximum number of code guesses.</p>
+      <p class="lockout-timer">Please wait <span id="lockoutTimer">5:00</span> before trying again.</p>
+      <div class="lockout-progress">
+        <div class="lockout-progress-bar" id="lockoutProgressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="title">🎯 Code Challenge 🎯</h1>
+    <p class="subtitle">Enter the secret code to claim your reward.</p>
+    
+    <!-- Collected Letters Display (shown if riddles completed) -->
+    <div class="collected-letters-container" id="collectedLettersHint" style="display: none;">
+      <p class="collected-hint">🔤 Your Collected Letters:</p>
+      <div class="collected-letters" id="displayCollectedLetters">
+        <!-- Letters will appear here -->
+      </div>
+      <p class="hint-text">Arrange these letters to form the code!</p>
+    </div>
+    
+    <!-- Code Guess Section -->
+    <div class="code-guess-section-large">
+      <div class="code-guess-icon">🔐</div>
+      <h2>Enter Code</h2>
+      
+      <div class="code-input-container">
+        <input type="text" id="codeGuessInput" placeholder="?" maxlength="5" class="code-guess-input-large" autofocus>
+      </div>
+      
+      <button id="guessCodeBtn" class="guess-btn-large">
+        <span>Submit</span>
+      </button>
+      
+      <div class="attempts-remaining-large">
+        Attempts: <span id="attemptsRemaining">3</span>/3
+      </div>
+    </div>
+
+    <!-- Navigation to Riddles -->
+    <div class="page-navigation">
+      <a href="riddles.html" class="nav-link-mystery">
+        <span class="nav-icon">🧩</span>
+        <span class="nav-text">Alternative Challenge</span>
+        <span class="nav-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Reward Section -->
+    <div id="rewardForm" class="reward-section">
+      <div class="celebration">🎊🎉🎊</div>
+      <h2 class="reward-title">🏆 Congratulations! 🏆</h2>
+      <p class="reward-message">You cracked the code!</p>
+      <div class="code-reveal">
+        <p>Your reward code is:</p>
+        <div class="code-box">
+          <span id="finalCode">LEIYL</span>
+        </div>
+      </div>
+      <p class="scan-instruction">Scan the QR code below to claim your Touch 'n Go reward!</p>
+      <div class="qr-container">
+        <img id="tngQRCode" src="assets/qr.png" alt="TnG Money Packet QR">
+      </div>
+      <p class="link-instruction">Or click the link below:</p>
+      <div class="link-box">
+        <a id="tngLink" href="https://cdn.tngdigital.com.my/s/oauth2/index.html#/moneypacket?p=61a4fb9a8c6f8319b69c9eb6d8e6ed091fd996c76083c012f9c6976766160fdeb39d28d08e489f8663b9d7c90f25d652e2ceadaa6de14257f872fad51c39f2890949fe8f62a859ce350e9f4be84f947c&v=2" target="_blank">
+          Click Here
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="guess.js"></script>
+</body>
+</html>

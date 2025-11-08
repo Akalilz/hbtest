@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>🧩 Riddle Challenge – TnG Reward!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🧩 Riddle Challenge 🧩</h1>
+    <p class="subtitle">Solve all 5 riddles to discover the secret code!</p>
+    
+    <!-- Navigation to Guess Page -->
+    <div class="page-navigation">
+      <a href="guess.html" class="nav-link nav-link-secondary">
+        <span class="nav-icon">🎯</span>
+        <span class="nav-text">Already know the code? Guess it here!</span>
+        <span class="nav-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Collected Letters Display -->
+    <div class="collected-letters-container">
+      <p class="collected-hint">🔤 Collected Letters:</p>
+      <div class="collected-letters" id="collectedLetters">
+        <!-- Letters will appear here as they are collected -->
+      </div>
+    </div>
+
+    <div id="riddleSection">
+      <!-- Single riddle shown at a time -->
+      <div class="riddle active-riddle" id="currentRiddle">
+        <div class="riddle-header">
+          <span class="riddle-status" id="riddleStatus"></span>
+        </div>
+        <p class="riddle-text" id="riddleText">I shine bright in the dark and hang above your head at night.</p>
+        <input type="text" id="riddleInput" placeholder="Your answer" class="riddle-input" autocomplete="off">
+        <button id="submitAnswer" class="submit-btn">
+          <span>🎯 Submit Answer</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Completion Message -->
+    <div id="completionMessage" class="reward-section">
+      <div class="celebration">🎊🎉🎊</div>
+      <h2 class="reward-title">🏆 All Riddles Solved! 🏆</h2>
+      <p class="reward-message">You've collected all the letters!</p>
+      <div class="code-reveal">
+        <p class="scrambled-hint">Now head to the <a href="guess.html" class="inline-link">Guess Page</a> to enter the code and claim your reward!</p>
+        <a href="guess.html" class="btn-primary-link">
+          🎯 Go to Guess Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="riddles.js"></script>
+</body>
+</html>

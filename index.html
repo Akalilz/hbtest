@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>🎁 TnG Reward Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="landing-header">
+      <h1 class="landing-title">🎁 B'Day Challenge 🎁</h1>
+      <p class="landing-subtitle">Try ah claim hadiah</p>
+    </div>
+
+    <div class="path-selection">
+      <a href="guess.html" class="path-card path-guess">
+        <div class="path-icon">🎯</div>
+        <h2>Guess the Code</h2>
+        <p class="path-description">Already know the secret code? Try your luck with 3 attempts!</p>
+        <div class="path-difficulty">
+          <span class="difficulty-label">Difficulty:</span>
+          <span class="difficulty-level hard">Hard</span>
+        </div>
+        <div class="path-button">Start Guessing →</div>
+      </a>
+
+      <a href="riddles.html" class="path-card path-riddles">
+        <div class="path-icon">🧩</div>
+        <h2>Solve Riddles</h2>
+        <p class="path-description">Answer 5 riddles correctly to discover the secret code!</p>
+        <div class="path-difficulty">
+          <span class="difficulty-label">Difficulty:</span>
+          <span class="difficulty-level medium">Medium</span>
+        </div>
+        <div class="path-button">Start Challenge →</div>
+      </a>
+    </div>
+
+    <div class="landing-footer">
+      <p>💡 <strong>Hint:</strong> If you don't know the code, start with the riddles!</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.path-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + (index * 0.2)}s`;
+      });
+    });
+  </script>
+</body>
+</html>
